@@ -70,10 +70,12 @@
 
       .breadcrumb-item {
         color: $uoc-white;
+        font-family: $font-family-base;
         
         a {
           color: $uoc-white;
           text-decoration: none;
+          
         }
 
         a:hover {
@@ -82,22 +84,9 @@
       }
     }
 
-    .breadcrumb-light {
-      color: $uoc-black;
-
-      .breadcrumb-item {
-        color: $uoc-black;
-        
-        a {
-          color: $uoc-black;
-          text-decoration: none;
-        }
-
-        a:hover {
-          color: darken($uoc-white, 10%);
-        }
-      }
-    }
+   
+      
+    
 
     .uoc-logo {
       display: block;
@@ -457,6 +446,12 @@
       background-image: url(../images/cocina3.jpg);
       background-size: cover ;
       padding: 1rem 1.25rem;
+      h2{
+        color: $uoc-white;
+      }
+      p{
+        color: $uoc-white;
+      }
     }
 
     /* Participantes (flex layout with container queries) */
@@ -537,7 +532,7 @@
     .contact__title {
       margin: 0 0 0.5rem 0;
       text-align: center;
-      color: $uoc-black;
+      color: $uoc-white;
 
     }
 
@@ -547,7 +542,7 @@
       font-size: responsive-font($font-size-base, 1.5);
       line-height: $line-height-base;
       font-family: $font-family-base;
-      color: $uoc-black;
+      color: $uoc-white;
     }
 
     .contact__form {
@@ -566,15 +561,18 @@
     .contact__row label {
       font-size: 0.95rem;
       margin-bottom: 0.35rem;
+      color: $uoc-white;
+      font-family: $font-family-base
     }
 
     .contact__row input[type="text"],
     .contact__row input[type="email"],
     .contact__row textarea {
       padding: 0.6rem 0.75rem;
-      border: 1px solid rgba(0, 0, 0, 0.12);
+      border: 1px solid $uoc-white;
       border-radius: 4px;
       font-size: 0.95rem;
+      font-family: $font-family-base;
     }
 
     .contact__submit {
@@ -610,7 +608,6 @@
   .articulo {
     max-width: 70%;
     padding: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.8);
     margin: auto;
   }
 
@@ -620,17 +617,19 @@
 
   .articulo__title {
     text-align: center;
-    color: $uoc-black;
+    color: $uoc-white;
     margin: 0 0 0.5rem 0;
   }
 
   .articulo__lead {
     margin: 0 0 1rem 0;
+    color: $uoc-white;
   }
 
   .articulo__body p {
     margin: 0 0 1rem 0;
     line-height: 1.6;
+    color: $uoc-white;
   }
 
   .articulo__figure {
@@ -649,6 +648,7 @@
   .articulo__caption {
 font-family: $font-family-base;
     margin-top: 0.5rem;
+    color: $uoc-white;
 
   }
 
@@ -709,6 +709,7 @@ font-family: $font-family-base;
 
     .articulo__intro {
       grid-column: 1 / 2;
+      
     }
 
     .articulo__main {
@@ -721,6 +722,7 @@ font-family: $font-family-base;
       line-height: 1.05;
       margin: 0;
       font-weight: 600;
+      color: $uoc-white;
     }
   }
 
@@ -736,12 +738,14 @@ font-family: $font-family-base;
     margin: 0;
     font-weight: 600;
     font-size: 1.8rem;
+    color: $uoc-white;
   }
 
   .articulo__cite {
     display: block;
     margin-top: 0.75rem;
     font-size: 0.95rem;
+    color: $uoc-white;
   }
 
 
