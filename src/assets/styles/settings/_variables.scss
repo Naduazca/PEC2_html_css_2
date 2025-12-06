@@ -1,0 +1,25 @@
+@use "sass:color";
+$uoc-corporate: #000078;
+$uoc-masterbrand: #73edff;
+$uoc-white: #ffffff;
+$uoc-black: #000000;
+
+//TYPOGRAPHY
+$font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-base-secondary: 'Georgia', serif;
+
+$font-size-base: 80%;
+$font-size-large: 90%;
+
+$line-height-base: 1.2;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$font-style-normal: normal;
+$font-style-italic: italic;
+
+// BREAKPOINTS
+$bp-small: 480px;//max-width mobile
+$bp-medium: 1023px;//max-width tablet
+$bp-large: 1024px;//min-width desktop

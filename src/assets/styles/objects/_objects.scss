@@ -1,0 +1,113 @@
+@use "../settings/variables" as *;
+/*---------Object styles header------------ */
+
+.flex {
+    display: flex;
+}
+
+.flex--between {
+    justify-content: space-between;
+}
+
+.flex--center {
+    align-items: center;
+}
+
+.container--margin {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.block {
+    display: block;
+}
+
+.header__item {
+    list-style: none;
+  
+}
+
+.header__item:hover {
+    text-decoration: underline;
+}
+
+.header__link {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+
+@layer reset {
+    * {
+        box-sizing: border-box;
+    }
+}
+
+
+/* * 2. @layer defaults
+ * Global typography and basic element styling.
+ */
+@layer defaults {
+    body {
+        height: 100vh;
+        margin: 0;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    h1{
+       font-family: $font-family-base;
+        font-size: 400%;
+        line-height: 1.2;
+    }
+p{
+    font-family: $font-family-base;
+    font-size: 120%;
+    line-height: 1.5;
+}
+    /* Rule separating hero and the list - placed here as a base styling for an <hr> */
+    .articulo__rule {
+        border: none;
+        border-top: 1px solid rgba(0,0,120,0.07);
+        margin: 2rem 0;
+    }
+
+    /* Decorative horizontal rule around the numbered list */
+    .number-list__rule {
+        border: none;
+        height: 1px;
+        background: rgba(115,237,255,0.28);
+        margin: 1.25rem 0;
+        position: relative;
+    }
+}
+
+
+/* * 5. @layer utilities
+ * Includes low-specificity utility and helper classes.
+ */
+@layer utilities {
+    /* grid-item helper (default stacking for non-grid browsers) */
+    .grid-item {
+        margin: 0.5rem 0;
+    }
+
+    .contact__consent { font-size: 0.9rem; }
+    
+    .contact__hidden { position: absolute !important; left: -9999px !important; }
+
+    /* If the main article column contains figures, add a soft left rule to visually separate columns */
+    .articulo__main:has(.articulo__figure) {
+        padding-left: 1rem;
+        border-left: 3px solid rgba(13, 40, 44, 0.08);
+    }
+
+    /* Use :is() to style hover/focus states for list items concisely */
+    .number-list__item:is(:hover, :focus-within) {
+        background: rgba(115, 237, 255, 0.03);
+        transform: translateY(-2px);
+        transition: transform 180ms ease, background-color 180ms ease;
+    }
+}

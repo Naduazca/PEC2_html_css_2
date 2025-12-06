@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Itinerario de un viaje a París - experiencia personal y recomendaciones.">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+  <title>PEC1. NADIA DIAZ CANO - Paris</title>
+  <link rel="icon" href="./assets/images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <include src="./views/header.html"></include>
+  <main>          
+    
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-light">
+          <li class="breadcrumb-item"><a href="./index.html">Inicio</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+        </ol>
+      </nav>
+    
+    <section class="contact" aria-labelledby="contact-title">      
+
+      <h1 class="contact__title">Contacto</h1>
+      <p class="contact__intro">Si deseas ponerte en contacto con nosotros, por favor envíanos un mensaje a través del siguiente formulario. Respondemos en un plazo de 48 horas.</p>
+
+      <div id="success-message" class="alert alert-success" role="alert" style="display: none;">
+        ¡Mensaje enviado con éxito! Te responderemos pronto.
+      </div>
+
+      <script>
+        if (window.location.search.includes('success=true')) {
+          document.getElementById('success-message').style.display = 'block';
+        }
+      </script>
+      
+      <!-- Netlify form: name must match form-name hidden input -->
+      <form name="contact" method="POST" data-netlify="true" action="./contacto.html?success=true" netlify-honeypot="bot-field" class="contact__form" aria-labelledby="contact-form-title">
+        <input type="hidden" name="form-name" value="contact">
+
+        <div class="contact__row">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" required placeholder="Tu nombre" />
+        </div>
+
+        <div class="contact__row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="nombre@gmail.com" />
+        </div>
+
+        <div class="contact__row">
+          <label for="subject">Asunto</label>
+          <input id="subject" name="subject" type="text" placeholder="Asunto (opcional)" />
+        </div>
+
+        <div class="contact__row">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Escríbenos lo que quieras"></textarea>
+        </div>
+
+        <div class="contact__row contact__consent">
+          <label>
+            <input type="checkbox" name="consent" required /> *Acepto que mis datos sean usados para responder a este mensaje.
+          </label>
+        </div>
+
+        <div class="contact__row">
+          <button type="submit" class="contact__submit">Enviar mensaje</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script>
+</body>
+</html>
