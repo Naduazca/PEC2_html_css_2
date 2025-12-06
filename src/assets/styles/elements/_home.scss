@@ -528,7 +528,21 @@
       margin: auto;
       padding: 1.25rem;
     }
+    
+    #success-message{
+      background-color: #a3cfbb;
+    }
+    .alert-success {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding: 2%;
+      color: #0f5132;
+      font-family: $font-family-base;
+      font-weight: 600;
+      
 
+    }
+    
     .contact__title {
       margin: 0 0 0.5rem 0;
       text-align: center;
@@ -567,6 +581,8 @@
 
     .contact__row input[type="text"],
     .contact__row input[type="email"],
+    .contact__row input[type="name"],
+    .contact__row input[type="subject"],
     .contact__row textarea {
       padding: 0.6rem 0.75rem;
       border: 1px solid $uoc-white;
