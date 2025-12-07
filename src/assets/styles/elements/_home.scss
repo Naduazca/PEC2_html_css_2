@@ -1,16 +1,15 @@
-// 1. SCSS Imports/Uses
+// ====================================================
+// 1. Importaciones de módulos y configuración inicial
+// =====================================================
 @use "../settings/variables" as *;
 @use "../objects/objects" as *;
 @use "../tools/functions" as *;
 
-
-/* * Define the layer order. 
- * This declaration is crucial and must be placed once at the root of the entry file.
- */
+//orden de capas 
 @layer defaults, theme, components, utilities;
 
 /* ----------------------------------------------------
- * 3. @layer theme: Containers and General Layout
+ * 3. @layer theme: estilos específicos de la temática dentro de la versión desktop
  * ---------------------------------------------------- */
 @media (min-width: 1024px) {
   @layer theme {
@@ -62,11 +61,8 @@
  * ---------------------------------------------------- */
   @layer components {
 
-    /* Breadcrumb*/
     /*---------------------breadcrumbs---------------------*/
-    /* Variables de Bootstrap personalizadas en tools/_bootstrap.scss
-       Estilos complementarios para completar el diseño */
-    
+
     .breadcrumb {
       color: $uoc-white;
 
@@ -108,7 +104,7 @@
       font-weight: 700;
     }
 
-    /* CSS Grid que no soportan algunos navegadores */
+    /* CSS Grid que soportan los navegadores */
     @supports (display: grid) {
       .poster {
         display: grid;
@@ -338,7 +334,7 @@
       }
     }
 
-    /* Container Queries para hero */
+    /*----------- Container Queries para HERO----------------- */
     @container hero-container (min-width: 600px) {
       .uoc-hero__button {
         padding: 0.6rem 1.2rem;
@@ -399,14 +395,11 @@
       &:hover {
         color: color(display-p3 0.3 0.85 1);
       }
-
     }
 
     .header__link {
       text-decoration: none;
       color: $uoc-black;
-
-
     }
 
     /*------------------Participantes---------------- */
@@ -471,7 +464,7 @@
       line-height: $line-height-base;
     }
 
-    /* -----------Container Queries para participantes-------------- */
+    /*-------------Container Queries para participantes-------------- */
     @container (min-width: 600px) {
       .participantes__list {
         gap: 1.25rem 1.5rem;
@@ -494,10 +487,8 @@
       }
     }
 
-    /*-------------mensaje exito--------------*/
-    /* Variables de Bootstrap personalizadas en tools/_bootstrap.scss
-       Estilos complementarios para completar el diseño */
-    
+/*------------------mensaje exito---------------------*/
+
     .alert.alert-success {
       background-color: #a3cfbb !important;
       color: #0f5132 !important;
@@ -507,7 +498,7 @@
       position: relative;
       padding: 2%;
       margin-bottom: 1.5rem;
-      
+
       p {
         margin: 0;
         color: #0f5132;
@@ -606,7 +597,7 @@
       grid-column: 1 / -1;
     }
 
-    /* Container Queries para contact */
+/* -----------------Container Queries para contact------------------------- */
     @container contact-container (min-width: 600px) {
       .contact__form {
         gap: 0.75rem;
@@ -624,7 +615,7 @@
     }
   }
 
-  /*------------------ articulo------------- */
+  /*------------------ articulo-----------------------*/
   .articulo {
     container-type: inline-size;
     container-name: articulo-container;
@@ -759,7 +750,7 @@
     color: $uoc-white;
   }
 
-  /* Container Queries para articulo */
+  /*------------------ Container Queries para articulo-----------------------*/
   @container articulo-container (min-width: 600px) {
     .articulo__title {
       font-size: responsive-font($font-size-large, 2);
@@ -857,7 +848,6 @@
     &:hover {
       color: color(display-p3 0.3 0.85 1);
       text-decoration: underline;
-
     }
   }
 
@@ -924,7 +914,7 @@ ____________________________________________________________________________*/
     position: relative;
     padding: 2%;
     margin-bottom: 1.5rem;
-    
+
     p {
       margin: 0;
       color: #0f5132;
@@ -973,7 +963,7 @@ ____________________________________________________________________________*/
     background-color: lab(90.83 0 0.01);
   }
 
-  /* Menú hamburguesa */
+  /*------------Menú hamburguesa --------------------*/
   .header__nav {
     position: fixed;
     top: 0;
@@ -1006,7 +996,7 @@ ____________________________________________________________________________*/
     padding-left: 0;
   }
 
-  /* Botón hamburguesa */
+  /* ---------------Botón menú hamburguesa -----------------------------*/
   .header__toggle {
     display: block;
     width: 30px;
@@ -1046,13 +1036,11 @@ ____________________________________________________________________________*/
   .header__toggle.is-active span:nth-child(1) {
     top: 10px;
     transform: rotate(135deg);
-
   }
 
   .header__toggle.is-active span:nth-child(2) {
     opacity: 0;
     left: -60px;
-
   }
 
   .header__toggle.is-active span:nth-child(3) {
@@ -1060,7 +1048,7 @@ ____________________________________________________________________________*/
     transform: rotate(-135deg);
   }
 
-  /* Overlay para cerrar el menú */
+  /*---------------- Overlay para cerrar el menú----------------- */
   .header__overlay {
     display: none;
     position: fixed;
@@ -1076,7 +1064,7 @@ ____________________________________________________________________________*/
     display: block;
   }
 
-  /*-------uoc hero-------*/
+  /*--------------------uoc hero---------------------*/
   .uoc-hero {
     background-image: url('../images/cocina3.jpg');
     background-size: cover;
@@ -1115,9 +1103,6 @@ ____________________________________________________________________________*/
     font-style: $font-style-italic;
     font-weight: $font-weight-bold;
   }
-
-  /*---------------------breadcrumbs---------------------*/
-  /* Breadcrumb usa variables de Bootstrap definidas en tools/_bootstrap.scss */
 
   /*--------------------------------------------------------
   --------------------pagina participantes-------------------
@@ -1311,8 +1296,6 @@ ____________________________________________________________________________*/
   }
 
   /*-------------mensaje exito--------------*/
-  /* Alert usa variables de Bootstrap definidas en tools/_bootstrap.scss */
-
 
   /*------------------ Footer Mobile ------------------------*/
   .footer-uoc {
@@ -1416,7 +1399,7 @@ ____________________________________________________________________________*/
     position: relative;
     padding: 2%;
     margin-bottom: 1.5rem;
-    
+
     p {
       margin: 0;
       color: #0f5132;
@@ -1464,7 +1447,7 @@ ____________________________________________________________________________*/
     background-color: lab(90.83 0 0.01);
   }
 
-  /* Menú hamburguesa */
+  /*----------- Menú hamburguesa --------------------*/
   .header__nav {
     position: fixed;
     top: 0;
@@ -1497,7 +1480,7 @@ ____________________________________________________________________________*/
     padding-left: 0;
   }
 
-  /* Botón hamburguesa */
+  /* ---------------Botón menú hamburguesa -----------------------------*/
   .header__toggle {
     display: block;
     width: 30px;
@@ -1537,13 +1520,11 @@ ____________________________________________________________________________*/
   .header__toggle.is-active span:nth-child(1) {
     top: 10px;
     transform: rotate(135deg);
-
   }
 
   .header__toggle.is-active span:nth-child(2) {
     opacity: 0;
     left: -60px;
-
   }
 
   .header__toggle.is-active span:nth-child(3) {
@@ -1604,9 +1585,6 @@ ____________________________________________________________________________*/
     font-style: $font-style-italic;
     font-weight: $font-weight-bold;
   }
-
-  /*---------------------breadcrumbs---------------------*/
-  /* Breadcrumb usa variables de Bootstrap definidas en tools/_bootstrap.scss */
 
   /*--------------------------------------------------------
   --------------------pagina participantes-------------------
@@ -1784,10 +1762,6 @@ ____________________________________________________________________________*/
     font-weight: 700;
     margin-top: 0.75rem;
   }
-
-  /*-------------mensaje exito--------------*/
-  /* Alert usa variables de Bootstrap definidas en tools/_bootstrap.scss */
-
 
   /*------------------ Footer Mobile ------------------------*/
   .footer-uoc {

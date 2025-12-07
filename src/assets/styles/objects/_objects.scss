@@ -1,5 +1,4 @@
 @use "../settings/variables" as *;
-/*---------Object styles header------------ */
 
 .flex {
     display: flex;
@@ -24,7 +23,6 @@
 
 .header__item {
     list-style: none;
-
 }
 
 .header__item:hover {
@@ -53,7 +51,7 @@
 
 
 /* * 2. @layer defaults
- * Global typography and basic element styling.
+ * elementos básicos como body, h1, p, etc.
  */
 @layer defaults {
     body {
@@ -94,7 +92,7 @@
 
 
 /* * 5. @layer utilities
- * Includes low-specificity utility and helper classes.
+ * incluye utilidades y helpers como .text-center, .margin-top-lg, etc.
  */
 @layer utilities {
     .grid-item {
