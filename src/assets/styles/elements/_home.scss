@@ -64,33 +64,34 @@
 
     /* Breadcrumb*/
     /*---------------------breadcrumbs---------------------*/
-    .breadcrumb-dark {
+    /* Variables de Bootstrap personalizadas en tools/_bootstrap.scss
+       Estilos complementarios para completar el diseño */
+    
+    .breadcrumb {
       color: $uoc-white;
 
       .breadcrumb-item {
         color: $uoc-white;
         font-family: $font-family-base;
-        text-decoration: underline;
 
         a {
           color: $uoc-white;
-          text-decoration: none;
+          text-decoration: underline;
           font-family: $font-family-base;
         }
 
+        &.active {
+          font-family: $font-family-base;
+          color: $uoc-white;
+          font-weight: $font-weight-bold;
+          text-decoration: none;
+        }
       }
 
-      .active {
-        font-family: $font-family-base;
-        color: $uoc-white;
+      a:hover {
         font-weight: $font-weight-bold;
         text-decoration: none;
       }
-       a:hover {
-          color: darken($uoc-masterbrand, 10%);
-        }
-
-
     }
 
     .uoc-logo {
@@ -430,6 +431,7 @@
     }
 
     /*---------------------cards participantes-----------------*/
+
     .card-img-top {
       height: 250px;
       object-fit: cover;
@@ -437,11 +439,6 @@
 
     .card {
       width: 18rem;
-    }
-
-    .card-body {
-      padding: 1rem;
-      background-color: $uoc-white;
     }
 
     .card-title {
@@ -479,17 +476,23 @@
     }
 
     /*-------------mensaje exito--------------*/
-    #success-message {
-      background-color: #a3cfbb;
-    }
-
-    .alert-success {
-      position: relative;
-      margin-bottom: 1.5rem;
-      padding: 2%;
-      color: #0f5132;
+    /* Variables de Bootstrap personalizadas en tools/_bootstrap.scss
+       Estilos complementarios para completar el diseño */
+    
+    .alert.alert-success {
+      background-color: #a3cfbb !important;
+      color: #0f5132 !important;
+      border-color: #a3cfbb !important;
       font-family: $font-family-base;
       font-weight: 600;
+      position: relative;
+      padding: 2%;
+      margin-bottom: 1.5rem;
+      
+      p {
+        margin: 0;
+        color: #0f5132;
+      }
     }
 
     /*-------------contacto--------------*/
@@ -1012,21 +1015,7 @@ ____________________________________________________________________________*/
   }
 
   /*---------------------breadcrumbs---------------------*/
-  .breadcrumb-dark {
-
-    .active {
-      font-family: $font-family-base;
-      color: $uoc-white;
-      font-weight: $font-weight-bold;
-      text-decoration: none;
-    }
-
-    a {
-      color: $uoc-white;
-      text-decoration: underline;
-      font-family: $font-family-base;
-    }
-  }
+  /* Breadcrumb usa variables de Bootstrap definidas en tools/_bootstrap.scss */
 
   /*--------------------------------------------------------
   --------------------pagina participantes-------------------
@@ -1220,18 +1209,7 @@ ____________________________________________________________________________*/
   }
 
   /*-------------mensaje exito--------------*/
-  #success-message {
-    background-color: #a3cfbb;
-  }
-
-  .alert-success {
-    position: relative;
-    margin-bottom: 1.5rem;
-    padding: 2%;
-    color: #0f5132;
-    font-family: $font-family-base;
-    font-weight: 600;
-  }
+  /* Alert usa variables de Bootstrap definidas en tools/_bootstrap.scss */
 
 
   /*------------------ Footer Mobile ------------------------*/
@@ -1481,21 +1459,7 @@ ____________________________________________________________________________*/
   }
 
   /*---------------------breadcrumbs---------------------*/
-  .breadcrumb-dark {
-
-    .active {
-      font-family: $font-family-base;
-      color: $uoc-white;
-      font-weight: $font-weight-bold;
-      text-decoration: none;
-    }
-
-    a {
-      color: $uoc-white;
-      text-decoration: underline;
-      font-family: $font-family-base;
-    }
-  }
+  /* Breadcrumb usa variables de Bootstrap definidas en tools/_bootstrap.scss */
 
   /*--------------------------------------------------------
   --------------------pagina participantes-------------------
@@ -1675,18 +1639,7 @@ ____________________________________________________________________________*/
   }
 
   /*-------------mensaje exito--------------*/
-  #success-message {
-    background-color: #a3cfbb;
-  }
-
-  .alert-success {
-    position: relative;
-    margin-bottom: 1.5rem;
-    padding: 2%;
-    color: #0f5132;
-    font-family: $font-family-base;
-    font-weight: 600;
-  }
+  /* Alert usa variables de Bootstrap definidas en tools/_bootstrap.scss */
 
 
   /*------------------ Footer Mobile ------------------------*/

@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Formulario de contacto
   const submitBtn = document.getElementById('submit-btn');
-  const successMessage = document.getElementById('success-message');
+  const successMessage = document.querySelector('.alert-success');
   const contactForm = document.getElementById('contact-form');
   
   if (submitBtn && successMessage && contactForm) {
