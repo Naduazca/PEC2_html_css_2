@@ -234,7 +234,7 @@
     .uoc-hero__note {
       margin: 0;
       color: $uoc-white;
-      font-size: responsive-font($font-size-base, 1.5);
+      font-size: responsive-font($font-size-base, 1.2);
     }
 
     .uoc-hero__meta {
@@ -247,7 +247,7 @@
     .uoc-hero__note-title {
       margin: 0;
       color: $uoc-white;
-      font-size: responsive-font($font-size-base, 2);
+      font-size: responsive-font($font-size-base, 1.5);
       margin-bottom: 20%;
     }
 
@@ -753,7 +753,7 @@
   /*------------------ Container Queries para articulo-----------------------*/
   @container articulo-container (min-width: 600px) {
     .articulo__title {
-      font-size: responsive-font($font-size-large, 2);
+      font-size: responsive-font($font-size-large, 3.5);
     }
 
     .articulo__lead {
@@ -1762,6 +1762,8 @@ ____________________________________________________________________________*/
     font-weight: 700;
     margin-top: 0.75rem;
   }
+
+
 
   /*------------------ Footer Mobile ------------------------*/
   .footer-uoc {
