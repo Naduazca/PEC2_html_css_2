@@ -172,6 +172,8 @@
 
     /*-------------- UOC Hero-------------- */
     .uoc-hero {
+      container-type: inline-size;
+      container-name: hero-container;
       padding: 1.25rem;
       background-image: url('../images/cocina3.jpg');
       background-size: cover;
@@ -336,6 +338,23 @@
       }
     }
 
+    /* Container Queries para hero */
+    @container hero-container (min-width: 600px) {
+      .uoc-hero__button {
+        padding: 0.6rem 1.2rem;
+      }
+
+      .uoc-hero__text {
+        font-size: responsive-font($font-size-base, 1.5);
+      }
+    }
+
+    @container hero-container (min-width: 900px) {
+      .uoc-hero__title {
+        font-size: responsive-font($font-size-large, 2.5);
+      }
+    }
+
     /*---------------- Header Desktop------------------ */
 
     .header {
@@ -497,6 +516,8 @@
 
     /*-------------contacto--------------*/
     .contact {
+      container-type: inline-size;
+      container-name: contact-container;
       max-width: 900px;
       margin: auto;
       padding: 1.25rem;
@@ -584,10 +605,29 @@
     .contact__row:nth-last-child(1) {
       grid-column: 1 / -1;
     }
+
+    /* Container Queries para contact */
+    @container contact-container (min-width: 600px) {
+      .contact__form {
+        gap: 0.75rem;
+      }
+
+      .contact__intro {
+        font-size: responsive-font($font-size-base, 1.5);
+      }
+    }
+
+    @container contact-container (min-width: 900px) {
+      .contact__row label {
+        font-size: 0.95rem;
+      }
+    }
   }
 
   /*------------------ articulo------------- */
   .articulo {
+    container-type: inline-size;
+    container-name: articulo-container;
     max-width: 70%;
     padding: 1.5rem;
     margin: auto;
@@ -719,6 +759,23 @@
     color: $uoc-white;
   }
 
+  /* Container Queries para articulo */
+  @container articulo-container (min-width: 600px) {
+    .articulo__title {
+      font-size: responsive-font($font-size-large, 2);
+    }
+
+    .articulo__lead {
+      line-height: 1.6;
+    }
+  }
+
+  @container articulo-container (min-width: 900px) {
+    .articulo__body p {
+      line-height: 1.6;
+    }
+  }
+
   /* ------------- lista numerada---------------------- */
   .number-list {
     list-style: none;
@@ -828,6 +885,51 @@
 ____________________________________________________________________________*/
 
 @media screen and (min-width: $bp-small) and (max-width: $bp-medium) {
+
+  /*---------------------breadcrumbs---------------------*/
+  .breadcrumb {
+    color: $uoc-white;
+
+    .breadcrumb-item {
+      color: $uoc-white;
+      font-family: $font-family-base;
+
+      a {
+        color: $uoc-white;
+        text-decoration: underline;
+        font-family: $font-family-base;
+      }
+
+      &.active {
+        font-family: $font-family-base;
+        color: $uoc-white;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+      }
+    }
+
+    a:hover {
+      font-weight: $font-weight-bold;
+      text-decoration: none;
+    }
+  }
+
+  /*-------------mensaje exito--------------*/
+  .alert.alert-success {
+    background-color: #a3cfbb !important;
+    color: #0f5132 !important;
+    border-color: #a3cfbb !important;
+    font-family: $font-family-base;
+    font-weight: 600;
+    position: relative;
+    padding: 2%;
+    margin-bottom: 1.5rem;
+    
+    p {
+      margin: 0;
+      color: #0f5132;
+    }
+  }
 
   .site__logo-img,
   .header__logo-img {
@@ -1275,6 +1377,51 @@ ____________________________________________________________________________*/
 ----------------------------- VERSION MOBILE ----------------------------
 ____________________________________________________________________________*/
 @media screen and (max-width: $bp-small) {
+
+  /*---------------------breadcrumbs---------------------*/
+  .breadcrumb {
+    color: $uoc-white;
+
+    .breadcrumb-item {
+      color: $uoc-white;
+      font-family: $font-family-base;
+
+      a {
+        color: $uoc-white;
+        text-decoration: underline;
+        font-family: $font-family-base;
+      }
+
+      &.active {
+        font-family: $font-family-base;
+        color: $uoc-white;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+      }
+    }
+
+    a:hover {
+      font-weight: $font-weight-bold;
+      text-decoration: none;
+    }
+  }
+
+  /*-------------mensaje exito--------------*/
+  .alert.alert-success {
+    background-color: #a3cfbb !important;
+    color: #0f5132 !important;
+    border-color: #a3cfbb !important;
+    font-family: $font-family-base;
+    font-weight: 600;
+    position: relative;
+    padding: 2%;
+    margin-bottom: 1.5rem;
+    
+    p {
+      margin: 0;
+      color: #0f5132;
+    }
+  }
 
   .site__logo-img,
   .header__logo-img {
