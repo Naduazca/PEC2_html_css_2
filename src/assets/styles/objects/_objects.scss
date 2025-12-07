@@ -39,6 +39,11 @@
     border-radius: 6px;
 }
 
+.header__link:hover {
+    color: color(display-p3 0.3 0.85 1);
+    text-decoration: underline;
+}
+
 
 @layer reset {
     * {
