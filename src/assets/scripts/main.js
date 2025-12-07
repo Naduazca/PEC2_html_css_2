@@ -18,6 +18,28 @@ library.add(faTwitter, faFacebookF, faGooglePlusG);
 dom.watch();
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Menú hamburguesa
+  const toggle = document.querySelector('.header__toggle');
+  const nav = document.querySelector('.header__nav');
+  const overlay = document.querySelector('.header__overlay');
+
+  if (toggle && nav && overlay) {
+    toggle.addEventListener('click', function() {
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.classList.toggle('is-active');
+      overlay.classList.toggle('is-visible');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    overlay.addEventListener('click', function() {
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-active');
+      overlay.classList.remove('is-visible');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  // Formulario de contacto
   const submitBtn = document.getElementById('submit-btn');
   const successMessage = document.getElementById('success-message');
   const contactForm = document.getElementById('contact-form');

@@ -24,7 +24,7 @@
 
 .header__item {
     list-style: none;
-  
+
 }
 
 .header__item:hover {
@@ -57,20 +57,23 @@
         font-size: 16px;
         line-height: 24px;
     }
-    h1{
-       font-family: $font-family-base;
+
+    h1 {
+        font-family: $font-family-base;
         font-size: 400%;
         line-height: 1.2;
     }
-p{
-    font-family: $font-family-base;
-    font-size: 120%;
-    line-height: 1.5;
-}
+
+    p {
+        font-family: $font-family-base;
+        font-size: 120%;
+        line-height: 1.5;
+    }
+
     /* Rule separating hero and the list - placed here as a base styling for an <hr> */
     .articulo__rule {
         border: none;
-        border-top: 1px solid rgba(0,0,120,0.07);
+        border-top: 1px solid rgba(0, 0, 120, 0.07);
         margin: 2rem 0;
     }
 
@@ -78,7 +81,7 @@ p{
     .number-list__rule {
         border: none;
         height: 1px;
-        background: rgba(115,237,255,0.28);
+        background: rgba(115, 237, 255, 0.28);
         margin: 1.25rem 0;
         position: relative;
     }
@@ -89,25 +92,51 @@ p{
  * Includes low-specificity utility and helper classes.
  */
 @layer utilities {
-    /* grid-item helper (default stacking for non-grid browsers) */
     .grid-item {
         margin: 0.5rem 0;
     }
 
-    .contact__consent { font-size: 0.9rem; }
-    
-    .contact__hidden { position: absolute !important; left: -9999px !important; }
+    .contact__consent {
+        font-size: 0.9rem;
+    }
 
-    /* If the main article column contains figures, add a soft left rule to visually separate columns */
+    .contact__hidden {
+        position: absolute !important;
+        left: -9999px !important;
+    }
+
     .articulo__main:has(.articulo__figure) {
         padding-left: 1rem;
         border-left: 3px solid rgba(13, 40, 44, 0.08);
     }
 
-    /* Use :is() to style hover/focus states for list items concisely */
     .number-list__item:is(:hover, :focus-within) {
         background: rgba(115, 237, 255, 0.03);
         transform: translateY(-2px);
         transition: transform 180ms ease, background-color 180ms ease;
+    }
+
+     main:has(.contact) {
+      background-image: url(../images/cocina5.jpg);
+      background-size: cover;
+      padding: 1rem 1.25rem;
+    }
+
+     main:has(.articulo) {
+    background-image: url(../images/cocina3.jpg);
+    background-size: cover;
+    padding: 1rem 1.25rem;
+
+    h2 {
+      color: $uoc-white;
+    }
+
+    p {
+      color: $uoc-white;
+    }
+  }
+
+   :is(.uoc-hero__note, .uoc-hero__note-title, .uoc-hero__note-frase) {
+      font-family: $font-family-base;
     }
 }
