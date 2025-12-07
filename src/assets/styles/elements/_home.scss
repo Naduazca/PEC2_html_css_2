@@ -63,22 +63,34 @@
   @layer components {
 
     /* Breadcrumb*/
+    /*---------------------breadcrumbs---------------------*/
     .breadcrumb-dark {
       color: $uoc-white;
 
       .breadcrumb-item {
         color: $uoc-white;
         font-family: $font-family-base;
+        text-decoration: underline;
 
         a {
           color: $uoc-white;
           text-decoration: none;
+          font-family: $font-family-base;
         }
 
-        a:hover {
+      }
+
+      .active {
+        font-family: $font-family-base;
+        color: $uoc-white;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+      }
+       a:hover {
           color: darken($uoc-masterbrand, 10%);
         }
-      }
+
+
     }
 
     .uoc-logo {
@@ -363,7 +375,8 @@
       gap: 2rem;
       align-items: center;
       font-family: $font-family-base;
-        &:hover {
+
+      &:hover {
         color: color(display-p3 0.3 0.85 1);
       }
 
@@ -373,7 +386,7 @@
       text-decoration: none;
       color: $uoc-black;
 
-    
+
     }
 
     /*------------------Participantes---------------- */
@@ -534,11 +547,21 @@
     }
 
     .contact__submit {
-      border: none;
-      padding: 0.6rem 1rem;
-      border-radius: 4px;
+      display: block;
+      margin: 0 auto;
+      padding: 0.75rem 2rem;
+      background-color: color(display-p3 0.3 0.85 1);
+      font-family: $font-family-base;
+      text-decoration: none;
+      border-radius: 10px;
       font-weight: 700;
       cursor: pointer;
+      border: none;
+
+      &:hover {
+        background-color: $uoc-white;
+        color: $uoc-corporate;
+      }
     }
 
     .contact__form {
@@ -995,12 +1018,12 @@ ____________________________________________________________________________*/
       font-family: $font-family-base;
       color: $uoc-white;
       font-weight: $font-weight-bold;
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     a {
       color: $uoc-white;
-      text-decoration: none;
+      text-decoration: underline;
       font-family: $font-family-base;
     }
   }
@@ -1464,12 +1487,12 @@ ____________________________________________________________________________*/
       font-family: $font-family-base;
       color: $uoc-white;
       font-weight: $font-weight-bold;
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     a {
       color: $uoc-white;
-      text-decoration: none;
+      text-decoration: underline;
       font-family: $font-family-base;
     }
   }
